@@ -10,8 +10,8 @@ class PokemonsController < ApplicationController
     if saved
       redirect_to trainer_path(@current_trainer.id)
     else
-      #redirect_to new_path
-      flash[:error] = @pokemon.errors.full_messages.to_sentence
+      flash[:error] = @poke.errors.full_messages.to_sentence
+      render new_path
     end
   end
 

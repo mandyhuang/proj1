@@ -16,4 +16,6 @@
 	    </ul>
 <% end %>
 
+<% if current_trainer.id == @trainer.id %>
 <%= button_to "Click to make your own unique pokemon!", new_path(), :class => "button medium", :method => :get %>
+<% end %>
